@@ -1,0 +1,40 @@
+# Secrets and local config
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+# Credentials and service-account files
+credentials*.json
+*service-account*.json
+client_secret*.json
+token*.json
+# MCP configs often embed tokens
+.mcp.json
+# Personal Claude Code settings
+.claude/settings.local.json
+
+# Reference material and outputs stay local (they hold real company data)
+context/*
+!context/README.md
+work/*
+!work/README.md
+
+# Data dumps from CRM and ad platforms
+*.csv
+*.xlsx
+*.sql
+*.dump
+crm-export*/
+
+# Backups and logs
+*.bak
+*.backup
+backups/
+*.log
+
+# Python and OS noise
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
